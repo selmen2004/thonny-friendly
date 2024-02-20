@@ -1,0 +1,2 @@
+A plug-in which offers primitive support (for now ) for Friendly_traceback python package in Thonny IDE .
+It needs to be installed to the interpetter (not only as thonny plugin ) because of the parser that needs to called (thonnycontrib.thonny_friendly.parser.parseable)
