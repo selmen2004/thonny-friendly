@@ -1,11 +1,12 @@
 [project]
 name = "thonny-friendly"
-version = "0.0.3"
+version = "0.0.4"
 description="A plug-in which offers primitive support (for now ) for Friendly_traceback python package in Thonny IDE ."
 readme = "README.md"
 requires-python = ">=3.0"
 dependencies = [
   'thonny>=3.2.1',
+  'friendly_traceback'
 ]
 license ={text = "GPL version 3"}
 authors =[{name = "Selmen Arous", email = "selmen.arous@gmail.com"}]
