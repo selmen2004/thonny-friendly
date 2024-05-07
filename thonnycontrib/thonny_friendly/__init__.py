@@ -93,23 +93,23 @@ class FriendlyAnalyzer(SubprocessProgramAnalyzer):
                     atts['lineno'] = line_number
                 atts['explanation'] = line.split(':', 1)[1].strip()
                 atts['msg'] = "Simulated Python Traceback"
-                warnings.append(atts.copy())
+                #warnings.append(atts.copy())
             elif "Shortened Traceback:" in line:
                 atts['explanation'] = line.split(':', 1)[1].strip()
                 atts['msg'] = "Shortened Traceback"
-                warnings.append(atts.copy())
+                #warnings.append(atts.copy())
             elif "Generic:" in line:
                 atts['explanation'] = line.split(':', 1)[1].strip()
-                atts['msg'] = "Generic"
+                atts['msg'] = "Explication :"
                 warnings.append(atts.copy())
-            elif "Cause:" in line:
+            elif "Cause :" in line:
                 atts['explanation'] = line.split(':', 1)[1].strip()
                 atts['msg'] = "Cause"
                 warnings.append(atts.copy())
             elif "Exception Raised Header:" in line:
                 atts['explanation'] = line.split(':', 1)[1].strip()
                 atts['msg'] = "Exception Raised Header"
-                warnings.append(atts.copy())
+                #warnings.append(atts.copy())
         """ def parse_traceback(output):
             # Define regular expressions to extract file name and line number
             file_pattern = r'File "(.*?)", line (\d+)'
