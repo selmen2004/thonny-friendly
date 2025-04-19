@@ -23,7 +23,7 @@ class FriendlyAnalyzer(ProgramAnalyzer):
 
     def start_analysis(self, main_file_path, imported_file_paths: Iterable[str]) -> None:
         
-        self.interesting_files = [main_file_path] + list(imported_file_paths)
+        self.interesting_files = [main_file_path] + list(imported_file_paths) +[get_workbench().get_local_cwd()]
         import friendly_traceback
         #print("------------------------Start--------------------")
         friendly_traceback.run(main_file_path,include="friendly_tb",console=False,redirect="capture",formatter=parseable,lang="fr")
@@ -130,5 +130,3 @@ def load_plugin():
     get_workbench().set_default("assistance.use_friendly", True)
     get_workbench().add_configuration_page("friendly", tr("Friendly"), FriendlyConfigPage, 90)
     add_error_helper("*", GenericErrorHelper)
-    
-
