@@ -104,4 +104,7 @@ def parseable(info: Info, include: InclusionChoice = "friendly_tb") -> str:
         sections.append("Traceback Data:")
         sections.append(str(info['_tb_data']))
 
-    return '\n'.join(sections)
+    #print(sections)
+    #return""
+    #@TODO: make this better
+    return '\n'.join(str(item) for item in sections)
